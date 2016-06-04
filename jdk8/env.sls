@@ -1,5 +1,8 @@
 {%- from 'jdk8/settings.sls' import java with context %}
 
+include:
+  - jdk8
+
 jdk-config:
   file.managed:
     - name: /etc/profile.d/java.sh
